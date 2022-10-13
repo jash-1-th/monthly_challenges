@@ -3,55 +3,35 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
+from django.http import HttpResponseNotFound, HttpResponse
 
 
-def index(request):
-    return HttpResponse("hello jash welcome , push yourself")
-
-
-def jan(request):
-    return HttpResponse("jan")
-
-
-def feb(request):
-    return HttpResponse("feb")
-
-
-def mar(request):
-    return HttpResponse("mar")
-
-
-def apr(request):
-    return HttpResponse("")
-
-
-def may(request):
-    return HttpResponse("")
-
-
-def jun(request):
-    return HttpResponse("")
-
-
-def jul(request):
-    return HttpResponse("jul")
-
-
-def aug(request):
-    return HttpResponse("")
-
-
-def sep(request):
-    return HttpResponse("")
-
-
-def oct(request):
-    return HttpResponse("")
-
-
-def nov(request):
-    return HttpResponse("")
-
-
-def dec(request):
-    return HttpResponse("")
+def challengeshome(request, month):
+    challenges_text = "jash hello"
+    if month == "january":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "february":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "march":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "april":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "may":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "june":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "july":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "august":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "september":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "october":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "november":
+        challenges_text = "hello jash welcome , push yourself"
+    elif month == "december":
+        challenges_text = "hello jash welcome , push yourself"
+    else:
+        return HttpResponseNotFound("ledra babai")
+    return HttpResponse(challenges_text)
